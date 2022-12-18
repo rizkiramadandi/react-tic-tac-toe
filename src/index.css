@@ -1,13 +1,109 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 14px 'Century Gothic', Futura, sans-serif;
+  margin: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 6vw;
+  font-weight: bold;
+  line-height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 10vw;
+  aspect-ratio: 1;
+  transition: .25s;
+  font-family: cursive;
+}
+
+.square:hover {
+    background-color: rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-info {
+  font-size: calc(12px + 2vw);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightblue;
+  margin: 12px 0;
+  padding: 12px;
+}
+
+.games {
+  text-align: center;
+}
+
+.game-history {
+  padding: 12px;
+}
+
+.game-history-title {
+  background-color: lightblue;
+  padding: 4px;
+}
+
+.history {
+    /* text-align: center; */
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.history li {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.history-btn, .game-restart {
+    background-color: slateblue;
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 2px 4px;
+    display: inline-block;
+}
+
+.history-btn:hover, .game-restart:hover {
+    cursor: pointer;
 }
